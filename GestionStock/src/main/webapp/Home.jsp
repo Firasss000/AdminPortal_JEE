@@ -20,7 +20,7 @@
                 <a class="nav-link" href="./listProd"> Produits</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Clients</a>
+                <a class="nav-link" href="./listClt">Clients</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Commandes</a>

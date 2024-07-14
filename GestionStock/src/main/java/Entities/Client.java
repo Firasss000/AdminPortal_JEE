@@ -15,6 +15,17 @@ public class Client {
         this.password = password;
     }
 
+    @Override
+    public String toString() {
+        return "Client{" +
+                "codeClt=" + codeClt +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
+
     public void setCodeClt(int codeClt) {
         this.codeClt = codeClt;
     }

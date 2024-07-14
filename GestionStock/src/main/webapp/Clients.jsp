@@ -1,12 +1,13 @@
 <%@ page import="Entities.Produit" %>
 <%@ page import="java.util.List" %>
+<%@ page import="Entities.Client" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<%--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">--%>
-<%--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>--%>
-<%--    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>--%>
-<%--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>--%>
+    <%--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">--%>
+    <%--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>--%>
+    <%--    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>--%>
+    <%--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>--%>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,6 +16,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -310,11 +314,11 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2>Manage <b>Products</b></h2>
+                        <h2>Manage <b>Clients</b></h2>
                     </div>
                     <div class="col-sm-6">
-                        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Product</span></a>
-                        <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
+                        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Client</span></a>
+                        <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete Client</span></a>
                     </div>
                 </div>
             </div>
@@ -328,33 +332,17 @@
 							</span>
                     </th>
                     <th>Code</th>
-                    <th>Libelle</th>
-                    <th>Prix</th>
-                    <th>Actions</th>
+                    <th>Nom</th>
+                    <th>Prenom </th>
+                    <th>Email</th>
+                    <th>Password</th>
                 </tr>
                 </thead>
                 <tbody>
-<%--                <table border="2">--%>
-<%--                    <tr>--%>
-<%--                        <th> code </th>--%>
-<%--                        <th> libelle </th>--%>
-<%--                        <th> prix </th>--%>
-<%--                    </tr>--%>
 
-<%--                    <%--%>
-<%--                        List<Produit> produit = (List<Produit>) request.getAttribute("listProduits") ;--%>
-<%--                        for (Produit p: produit){--%>
-<%--                    %>--%>
-<%--                    <tr>--%>
-<%--                        <td><%= p.getCodeProduit() %></td>--%>
-<%--                        <td> <%= p.getLibelle()%></td>--%>
-<%--                        <td> <%= p.getPrixProduit()%></td>--%>
-<%--                    </tr>--%>
-<%--                    <% } %>--%>
-<%--                </table>--%>
                 <%
-                    List<Produit> produit = (List<Produit>) request.getAttribute("listProduits") ;
-                    for (Produit p: produit){
+                    List<Client> clients = (List<Client>) request.getAttribute("listClients") ;
+                    for (Client c: clients){
                 %>
                 <tr>
                     <td>
@@ -363,10 +351,11 @@
 								<label for="checkbox1"></label>
 							</span>
                     </td>
-                   <td><%= p.getCodeProduit()  %></td> <%-- Code--%>
-                    <td> <%= p.getLibelle()  %></td> <%-- Libelle--%>
-                    <td> <%= p.getPrixProduit() %></td> <%-- Prix --%>
-
+                    <td><%= c.getCodeClt()  %></td> <%-- Code--%>
+                    <td> <%= c.getNom()  %></td> <%-- nom--%>
+                    <td> <%= c.getPrenom() %></td>  <%-- prenom --%>
+                    <td> <%= c.getEmail() %></td>
+                    <td> <%= c.getPassword() %></td>
                     <td>
                         <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                         <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -376,43 +365,51 @@
 
                 </tbody>
             </table>
-<%--            <div class="clearfix">--%>
-<%--                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>--%>
-<%--                <ul class="pagination">--%>
-<%--                    <li class="page-item disabled"><a href="#">Previous</a></li>--%>
-<%--                    <li class="page-item"><a href="#" class="page-link">1</a></li>--%>
-<%--                    <li class="page-item"><a href="#" class="page-link">2</a></li>--%>
-<%--                    <li class="page-item active"><a href="#" class="page-link">3</a></li>--%>
-<%--                    <li class="page-item"><a href="#" class="page-link">4</a></li>--%>
-<%--                    <li class="page-item"><a href="#" class="page-link">5</a></li>--%>
-<%--                    <li class="page-item"><a href="#" class="page-link">Next</a></li>--%>
-<%--                </ul>--%>
-<%--            </div>--%>
+            <%--            <div class="clearfix">--%>
+            <%--                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>--%>
+            <%--                <ul class="pagination">--%>
+            <%--                    <li class="page-item disabled"><a href="#">Previous</a></li>--%>
+            <%--                    <li class="page-item"><a href="#" class="page-link">1</a></li>--%>
+            <%--                    <li class="page-item"><a href="#" class="page-link">2</a></li>--%>
+            <%--                    <li class="page-item active"><a href="#" class="page-link">3</a></li>--%>
+            <%--                    <li class="page-item"><a href="#" class="page-link">4</a></li>--%>
+            <%--                    <li class="page-item"><a href="#" class="page-link">5</a></li>--%>
+            <%--                    <li class="page-item"><a href="#" class="page-link">Next</a></li>--%>
+            <%--                </ul>--%>
+            <%--            </div>--%>
         </div>
     </div>
 </div>
-<!-- Add Product Modal HTML -->
+<!-- Add Client Modal HTML -->
 <div id="addEmployeeModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="./ajtProd">
+            <form action="./ajtClt">
                 <div class="modal-header">
-                    <h4 class="modal-title">Add Product</h4>
+                    <h4 class="modal-title">Add Client</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Code</label>
-                        <input type="text" class="form-control" name="code" required>
+                        <input type="text" class="form-control" name="codeClt" required>
                     </div>
                     <div class="form-group">
-                        <label>Libelle</label>
-                        <input type="text" class="form-control" name="libelle" required>
+                        <label>Nom</label>
+                        <input type="text" class="form-control" name="nom" required>
                     </div>
 
                     <div class="form-group">
-                        <label>Prix</label>
-                        <input type="text" class="form-control" name="prix" required>
+                        <label>Prenom</label>
+                        <input type="text" class="form-control" name="prenom" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="password" required>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -424,30 +421,42 @@
     </div>
 </div>
 <!-- Edit Modal HTML -->
- <div id="editEmployeeModal" class="modal fade">
+<div id="editEmployeeModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="./modifProd">
+            <form action="./modifClt">
                 <div class="modal-header">
-                    <h4 class="modal-title">Edit Product</h4>
+                    <h4 class="modal-title">Edit Client</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Code du produit a modifier</label>
+                        <label>Code du Client a modifier</label>
                         <input type="text" class="form-control" name ="ancienCode" required>
                     </div>
                     <div class="form-group">
                         <label>Code</label>
-                        <input type="text" class="form-control" name="code" required>
+                        <input type="text" class="form-control" name="codeClt" required>
                     </div>
                     <div class="form-group">
-                        <label>Libelle</label>
-                        <input type="text" class="form-control"  name="libelle" required>
+                        <label>Nom</label>
+                        <input type="text" class="form-control"  name="nom" required>
                     </div>
                     <div class="form-group">
-                        <label>Prix</label>
-                        <input type="text" class="form-control" name="prix" required>
+                        <label>Prenom</label>
+                        <input type="text" class="form-control" name="prenom" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="Password" class="form-control" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password </label>
+                        <input type="password" class="form-control" name="password2" required>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -462,15 +471,15 @@
 <div id="deleteEmployeeModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="./suppProd">
+            <form action="./suppClt">
                 <div class="modal-header">
-                    <h4 class="modal-title">Delete Product</h4>
+                    <h4 class="modal-title">Delete Client</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Code</label>
-                        <input type="text" class="form-control" name="code" required>
+                        <label>Code client a supprimer</label>
+                        <input type="text" class="form-control" name="codeClt" required>
                     </div>
 
                 </div>
@@ -483,4 +492,25 @@
     </div>
 </div>
 </body>
+<%-- SweetAlert script for error message --%>
+<%
+    String errorMessage = (String) request.getAttribute("ErrorMessage");
+    if (errorMessage != null) {
+%>
+<script>
+    Swal.fire({
+        title: "Erreur",
+        text: "<%= errorMessage %>",
+        icon: "error",
+        showClass: {
+            popup: "animate__animated animate__fadeInUp animate__faster"
+        },
+        hideClass: {
+            popup: "animate__animated animate__fadeOutDown animate__faster"
+        }
+    });
+</script>
+<%
+    }
+%>
 </html>
