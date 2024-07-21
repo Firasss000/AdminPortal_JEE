@@ -105,7 +105,7 @@ public class DAOProd implements DAOProduit{
             System.err.println(e.getMessage());
         }
         return produits;
-}
+    }
 
 
 }

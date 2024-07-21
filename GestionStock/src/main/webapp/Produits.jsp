@@ -286,7 +286,7 @@
                 <a class="nav-link" href="./listClt">Clients</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Commandes</a>
+                <a class="nav-link" href="./listCom">Commandes</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -334,24 +334,6 @@
                 </tr>
                 </thead>
                 <tbody>
-<%--                <table border="2">--%>
-<%--                    <tr>--%>
-<%--                        <th> code </th>--%>
-<%--                        <th> libelle </th>--%>
-<%--                        <th> prix </th>--%>
-<%--                    </tr>--%>
-
-<%--                    <%--%>
-<%--                        List<Produit> produit = (List<Produit>) request.getAttribute("listProduits") ;--%>
-<%--                        for (Produit p: produit){--%>
-<%--                    %>--%>
-<%--                    <tr>--%>
-<%--                        <td><%= p.getCodeProduit() %></td>--%>
-<%--                        <td> <%= p.getLibelle()%></td>--%>
-<%--                        <td> <%= p.getPrixProduit()%></td>--%>
-<%--                    </tr>--%>
-<%--                    <% } %>--%>
-<%--                </table>--%>
                 <%
                     List<Produit> produit = (List<Produit>) request.getAttribute("listProduits") ;
                     for (Produit p: produit){

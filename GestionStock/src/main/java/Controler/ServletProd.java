@@ -69,7 +69,6 @@ public class ServletProd extends HttpServlet {
         modelProd.ajouterProd();
 
         resp.sendRedirect("./listProd");
-
     }
 
     public void suppProd(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -77,7 +76,6 @@ public class ServletProd extends HttpServlet {
 
         modelProd.supprimerProd(Long.parseLong(code));
         resp.sendRedirect("./listProd");
-
     }
 
     public void modifProd(HttpServletRequest req, HttpServletResponse resp) throws IOException {

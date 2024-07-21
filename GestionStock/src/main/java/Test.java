@@ -1,9 +1,9 @@
-import DAO.DAOClt;
-import DAO.DAOProd;
-import DAO.DAOProduit;
+import DAO.*;
 import Entities.Client;
+import Entities.Commande;
 import Entities.Produit;
 import Model.ModelClient;
+import Model.ModelCommande;
 import Model.ModelProd;
 
 public class Test {
@@ -25,9 +25,9 @@ public class Test {
 //        modelProd.modifierProd(p,15489753L);
 
         //DAOClt daoClt = new DAOClt() ;
-        ModelClient modelClient = new ModelClient() ;
-
-        Client client = new Client(01,"Malek","Takrouni","mt@tm","******") ;
+//        ModelClient modelClient = new ModelClient() ;
+//
+//        Client client = new Client(01,"Malek","Takrouni","mt@tm","******") ;
 //        modelClient.setClient(client);
 //        modelClient.ajouterClt(client);
 //        modelClient.supprimerClt(2);
@@ -39,6 +39,20 @@ public class Test {
        // daoClt.ajouterClient(client);
        // System.out.println(daoClt.getTousClients()) ;
       //  daoClt.archiverClient(2);
+//        DAOCom daoCommande = new DAOCom() ;
+//        ModelCommande modelCommande = new ModelCommande();
+//
+//        Commande commande = new Commande(1598755, "commande 1","15/06/2024",
+//                "Manzah 1 ",1598754);
+//        modelCommande.setCommande(commande);
+//
+//        modelCommande.modifierCommande(commande,1598754);
+//
+//        daoCommande.modifierCommande(commande, 1598754);
+//        daoCommande.archiverCommande(1564);
+//        daoCommande.ajouterCommande(commande);
+//        System.out.println(daoCommande.listerCommande());
+
 
     }
 }
